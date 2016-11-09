@@ -13,9 +13,11 @@ public class Fileread {
   
     
     public static void main(String[] args) {
+       FileReader fr=null;
+      BufferedReader bt=null;
         try{
-       FileReader fr=new FileReader("E:\\demo.txt");
-       BufferedReader bt =new BufferedReader(fr);
+      fr=new FileReader("E:\\demo.txt");
+       bt =new BufferedReader(fr);
        String str=bt.readLine();
        {
            if(str!=null){
@@ -26,7 +28,7 @@ public class Fileread {
     catch(Exception ex){
         System.out.println(ex.toString());
 }
-       /* finally{
+      finally{
             if(fr!=null){
                 fr=null;
             }
@@ -34,6 +36,6 @@ public class Fileread {
                 bt=null;
             }
         }
-    }*/
+    }
 }
 }
